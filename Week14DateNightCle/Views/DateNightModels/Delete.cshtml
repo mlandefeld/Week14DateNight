@@ -1,0 +1,81 @@
+﻿@model Week14DateNightCle.Models.DateNightModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+<link href='https://fonts.googleapis.com/css?family=Sacramento|Josefin+Sans' rel='stylesheet' type='text/css'>
+
+<h1>Delete</h1>
+
+<p>Are you sure you want to delete this?</p>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Photo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Website)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Website)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> 
+            <button type="button" class="btn btn-default">@Html.ActionLink("Back to List", "Index")</button>
+        </div>
+    }
+</div>

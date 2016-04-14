@@ -1,0 +1,78 @@
+﻿@model Week14DateNightCle.Models.DateNightModel
+
+@{
+    ViewBag.Title = "Details";
+}
+<link href='https://fonts.googleapis.com/css?family=Sacramento|Josefin+Sans' rel='stylesheet' type='text/css'>
+
+<h1>Details</h1>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Photo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Website)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Website)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <button type="button" class="btn btn-default" style="font-size: 18px;">@Html.ActionLink("Edit", "Edit", new { id = Model.RecordNum })</button>
+    <button type="button" class="btn btn-default" style="font-size: 18px;">@Html.ActionLink("Back to List", "Index")</button>
+
+   
+   
+</p>

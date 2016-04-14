@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Week14DateNightCle.Models.DateNightModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<link href='https://fonts.googleapis.com/css?family=Sacramento|Josefin+Sans' rel='stylesheet' type='text/css'>
+
+<h1>Date Information</h1>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateType)
+        </th>
+        <!--
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Website)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+            -->
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateType)
+        </td>
+
+        <!--
+            <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Photo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Website)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        -->
+        
+        <td>
+            <button type="button" class="btn btn-default" style="font-size: 18px;">@Html.ActionLink("Edit", "Edit", new { id = item.RecordNum })</button>
+            <button type="button" class="btn btn-default" style="font-size: 18px;">@Html.ActionLink("Details", "Details", new { id = item.RecordNum })</button>
+            <button type="button" class="btn btn-default" style="font-size: 18px;">@Html.ActionLink("Delete", "Delete", new { id = item.RecordNum })</button>
+        </td>
+    </tr>
+}
+
+</table>
+<p>
+    <button type="button" class="btn btn-default" style="font-size: 18px;">@Html.ActionLink("Create New", "Create")</button>
+</p>
